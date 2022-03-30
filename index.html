@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="css/style.css" rel="stylesheet" />
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				font-size: 62.5%;
+			}
+
+			body {
+				height: 100vh;
+				display: grid;
+				place-items: center;
+				background-color: #202020;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			.slide-effect {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				color: white;
+			}
+
+			.slideDown,
+			.slideUp {
+				position: relative;
+				font-size: 4rem;
+				opacity: 0;
+			}
+
+			.slideDown {
+				top: -4rem;
+				animation: slideDown ease 0.5s forwards;
+			}
+
+			.slideUp {
+				top: 4rem;
+				left: 1rem;
+				animation: slideUp ease 0.5s forwards;
+			}
+
+			@keyframes slideUp {
+				0% {
+					transform: translateY(0);
+				}
+				100% {
+					transform: translateY(-4rem);
+					opacity: 1;
+				}
+			}
+
+			@keyframes slideDown {
+				0% {
+					transform: translateY(0);
+				}
+				100% {
+					transform: translateY(4rem);
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="slide-effect">
+			<div class="slideDown">Subscribe to</div>
+			<div class="slideUp">Cules Coding</div>
+		</div>
+	</body>
+</html>
